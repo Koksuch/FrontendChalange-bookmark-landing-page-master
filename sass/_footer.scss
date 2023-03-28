@@ -1,0 +1,57 @@
+@use './variables' as *; 
+@use './mixins' as *;
+
+#footer {
+  background-color: $veryDarkBlue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 8% 1% 8%;
+  
+  &__left{
+    display: flex;
+    align-items: center;
+    padding: 3% 0 2% 0;
+    gap: 40px;
+    svg {
+      g {
+        path {
+          fill: white;
+        }
+      }
+    }
+    a {
+      @include link-formatting(white, $softRed);
+      height: 40px;
+      padding: 20px;
+      letter-spacing: 2px;
+    }
+  }
+  &__right {
+    justify-self: flex-end;
+    a:first-child {
+      margin-right: 30px;
+    }
+    a:hover, a:focus {
+      outline: none;
+      svg {
+        path {
+          fill: $softRed;
+        }
+      }
+    }
+  }
+  p {
+    width: 100%;
+    font-size: 18px; 
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    a {
+      @include link-formatting($softBlue, $softRed);
+      text-decoration: underline;
+
+    }
+  }
+}

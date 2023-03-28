@@ -1,0 +1,21 @@
+@use './variables' as *;
+
+@mixin link-formatting($color, $hoverColor) {
+  display: inline-flex;
+  align-items: center;
+  color: $color;
+  font-size: 18px;
+  text-decoration: unset;
+  
+  &:hover, &:focus {
+    color: $hoverColor;
+    outline: none;
+  }
+  
+}
+
+@mixin box-shadow {
+  -webkit-box-shadow: 10px 7px 25px 3px rgba(145,148,161,0.15);
+  -moz-box-shadow: 10px 7px 25px 3px rgba(145,148,161,0.15);
+  box-shadow: 10px 7px 25px 3px rgba(145,148,161,0.15);
+}
